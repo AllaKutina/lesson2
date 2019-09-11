@@ -12,8 +12,12 @@
 dict_of_questions = {"Как дела?": "Хорошо!", "Что делаешь?": "Программирую", "Как погода?": "Солнечно"}
 
 def ask_user(questions):
-    question = input("Введите вопрос: ")
-    print(questions.get(question, "Не знаю"))
+    question = ""
+
+    while not question in questions:
+        question = input("Введите вопрос: ")
+    else:
+        print(questions.get(question, "Не знаю"))
 
 ask_user(dict_of_questions)
 
