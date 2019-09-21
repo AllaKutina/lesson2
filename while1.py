@@ -9,7 +9,7 @@
 def ask_user():
     answer = ''
 
-    while not answer == "Хорошо":
+    while not answer.lower() == "хорошо":
         answer = input('Как дела? ')
 
 ask_user()
